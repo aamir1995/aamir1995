@@ -1,8 +1,8 @@
 # Visit https://github.com/lowlighter/metrics/blob/master/action.yml for full reference
 name: Metrics
 on:
-  # Schedule updates (each hour)
-  schedule: [{cron: "0 * * * *"}]
+  # Schedule updates (every day)
+  schedule: [{cron: "0 0 * * *"}]
   # Lines below let you run workflow manually and on each commit
   workflow_dispatch:
   push: {branches: ["master", "main"]}
@@ -82,8 +82,6 @@ jobs:
           plugin_people_limit: 24
           plugin_people_size: 28
           plugin_people_types: followers, following
-          plugin_projects: yes
-          plugin_projects_limit: 4
           plugin_reactions: yes
           plugin_reactions_display: absolute
           plugin_reactions_limit: 200
@@ -91,13 +89,13 @@ jobs:
           plugin_reactions_limit_discussions_comments: 100
           plugin_reactions_limit_issues: 100
           plugin_repositories: yes
+          plugin_repositories_affiliations: owner
+          plugin_repositories_batch: 100
+          plugin_repositories_featured: aamir1995/clamp.ts,aamir1995/knowYourDroid,aamir1995/ng2Final-forms,aamir1995/angular2-boilerplate-with-webpack ,aamir1995/angular2-boilerplate-with-gulp
           plugin_skyline: yes
           plugin_skyline_frames: 60
           plugin_skyline_quality: 0.5
           plugin_skyline_year: current-year
-          plugin_sponsors: yes
-          plugin_sponsors_sections: goal, list, about
-          plugin_sponsors_size: 24
           plugin_stargazers: yes
           plugin_stargazers_charts_type: classic
           plugin_starlists: yes
